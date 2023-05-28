@@ -18,27 +18,25 @@ stopButton.setAttribute("disabled","")
 //     clearInterval(backgroundColor);  
 // }
 
-// function startButtonDisable() {
-//     startButton.setAttribute("disabled", "");
-//     stopButton.removeAttribute("disabled")
-// }
+function startButtonDisable() {
+    startButton.setAttribute("disabled", "");
+    stopButton.removeAttribute("disabled")
+}
 
-// function stopButtonDisable() {
-//     startButton.removeAttribute("disabled");
-//     stopButton.setAttribute("disabled","")
-// }
-
-// startButton.addEventListener("click", () => {
-//     backgroundColorSelector();
-//     startButtonDisable();
-// })
-
-// stopButton.addEventListener("click", () => {
-//     stopBackgroundColorSelector();
-//     stopButtonDisable();
-// })
+function stopButtonDisable() {
+    startButton.removeAttribute("disabled");
+    stopButton.setAttribute("disabled","")
+}
 
 startButton.addEventListener("click", () => {
-    startButton.setAttribute("alt","test")
+    // backgroundColorSelector();
+    startButtonDisable();
 })
+
+stopButton.addEventListener("click", () => {
+    // stopBackgroundColorSelector();
+    stopButtonDisable();
+})
+
+
 
