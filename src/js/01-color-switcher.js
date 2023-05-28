@@ -28,15 +28,20 @@ function stopButtonDisable() {
     stopButton.setAttribute("disabled","")
 }
 
-startButton.addEventListener("click", () => {
+function startButtonHandler() {
     backgroundColorSelector();
-    startButtonDisable();
-})
+    startButtonDisable()
+}
 
-stopButton.addEventListener("click", () => {
+function stopButtonHandler() {
     stopBackgroundColorSelector();
-    stopButtonDisable();
-})
+    stopButtonDisable()
+}
+
+startButton.addEventListener("click", startButtonHandler)
+
+stopButton.addEventListener("click", stopButtonHandler)
+
 
 
 
