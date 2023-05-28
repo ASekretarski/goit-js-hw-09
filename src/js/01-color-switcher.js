@@ -23,4 +23,14 @@ stopButton.addEventListener("click", () => {
     stopButton.setAttribute("disabled", "");
     startButton.removeAttribute("disabled")
 })
+startButton.addEventListener("click", () => {
+    colorChange = setInterval(() => {
+        setBackgroundColor()
+    }, 1000);
+
+})
+
+stopButton.addEventListener("click", () => {
+    clearInterval(colorChange);
+})
 
