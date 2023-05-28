@@ -12,17 +12,29 @@ function changeBackgroundColor() {
 
 function backgroundColorSelector() {
     backgroundColor = setInterval(changeBackgroundColor, 1000);
+}
+
+function stopBackgroundColorSelector() {
+    clearInterval(backgroundColor);  
+}
+
+function startButtonDisable() {
     startButton.setAttribute("disabled", "");
     stopButton.removeAttribute("disabled")
 }
 
-function stopBackgroundColorSelector() {
-    clearInterval(backgroundColor);
+function stopButtonDisable() {
     startButton.removeAttribute("disabled");
     stopButton.setAttribute("disabled","")
 }
 
-startButton.addEventListener("click", backgroundColorSelector)
+startButton.addEventListener("click", () => {
+    backgroundColorSelector();
+    startButtonDisable();
+})
 
-stopButton.addEventListener("click", stopBackgroundColorSelector)
+stopButton.addEventListener("click", () => {
+    stopBackgroundColorSelector();
+    stopButtonDisable();
+})
 
