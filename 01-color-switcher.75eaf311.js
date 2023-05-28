@@ -1,0 +1,2 @@
+!function(){document.querySelector("body");var t=document.querySelector("button[data-start]"),e=document.querySelector("button[data-stop]");e.setAttribute("disabled",""),t.addEventListener("click",(function(){t.setAttribute("disabled",""),e.removeAttribute("disabled")})),e.addEventListener("click",(function(){e.setAttribute("disabled",""),t.removeAttribute("disabled")}))}();
+//# sourceMappingURL=01-color-switcher.75eaf311.js.map
