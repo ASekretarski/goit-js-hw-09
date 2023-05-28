@@ -11,15 +11,15 @@ function setBackgroundColor() {
 }
 
 startButton.addEventListener("click", () => {
-    colorChange = setInterval(() => {
-        setBackgroundColor()
-    }, 1000);
+    // colorChange = setInterval(() => {
+    //     setBackgroundColor()
+    // }, 1000);
     startButton.setAttribute("disabled", "");
     stopButton.removeAttribute("disabled")
 })
 
 stopButton.addEventListener("click", () => {
-    clearInterval(colorChange);
+    // clearInterval(colorChange);
     stopButton.setAttribute("disabled", "");
     startButton.removeAttribute("disabled")
 })
